@@ -1,0 +1,66 @@
+## [Standard .NET .gitignore](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore)
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+Log/
+[Ll]og/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Core
+ClientApp/dist/
+wwwroot/dist/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# Visual Studio
+.vs/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.aps
+*.bak
+*.cache
+*.db
+*.opendb
+*.pfx
+*.publishsettings
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.v12.suo
+*.v11.suo
+*.v10.suo
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# JetBrains
+.idea/
+*.iws
+out/
+cmake-build-debug/
+
+# Operating System
+.DS_Store
+Thumbs.db
