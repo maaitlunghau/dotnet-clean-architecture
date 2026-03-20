@@ -992,6 +992,43 @@
             "rid": "win"
           }
         }
+      },
+      "CLEAN_APPLICATION/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "CLEAN_DOMAIN": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CLEAN_APPLICATION.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CLEAN_APPLICATION.dll": {}
+        }
+      },
+      "CLEAN_DOMAIN/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/CLEAN_DOMAIN.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CLEAN_DOMAIN.dll": {}
+        }
+      },
+      "CLEAN_INTERFACE/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "CLEAN_APPLICATION": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.25"
+        },
+        "compile": {
+          "bin/placeholder/CLEAN_INTERFACE.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CLEAN_INTERFACE.dll": {}
+        }
       }
     }
   },
@@ -2399,10 +2436,26 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "CLEAN_APPLICATION/1.0.0": {
+      "type": "project",
+      "path": "../CLEAN_APPLICATION/CLEAN_APPLICATION.csproj",
+      "msbuildProject": "../CLEAN_APPLICATION/CLEAN_APPLICATION.csproj"
+    },
+    "CLEAN_DOMAIN/1.0.0": {
+      "type": "project",
+      "path": "../CLEAN_DOMAIN/CLEAN_DOMAIN.csproj",
+      "msbuildProject": "../CLEAN_DOMAIN/CLEAN_DOMAIN.csproj"
+    },
+    "CLEAN_INTERFACE/1.0.0": {
+      "type": "project",
+      "path": "../CLEAN_INTERFACE/CLEAN_INTERFACE.csproj",
+      "msbuildProject": "../CLEAN_INTERFACE/CLEAN_INTERFACE.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "CLEAN_INTERFACE >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.1",
       "Microsoft.EntityFrameworkCore >= 8.0.25",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.25",
@@ -2433,7 +2486,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/maaitlunghau/Documents/Projects/dotnet-clean-architecture/CLEAN_INTERFACE/CLEAN_INTERFACE.csproj": {
+              "projectPath": "/Users/maaitlunghau/Documents/Projects/dotnet-clean-architecture/CLEAN_INTERFACE/CLEAN_INTERFACE.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
