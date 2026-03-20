@@ -1,7 +1,6 @@
 using CLEAN_APPLICATION;
 using CLEAN_DOMAIN;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace CLEAN_INTERFACE.Repository;
 
@@ -17,7 +16,7 @@ public class ProductRepository : IProductRepository
         return await _dbContext.Products.ToListAsync();
     }
 
-    public async Task<Product> GetProductAsync(Guid id)
+    public async Task<Product?> GetProductAsync(Guid id)
     {
         return await _dbContext.Products.FindAsync(id);
     }
@@ -40,7 +39,7 @@ public class ProductRepository : IProductRepository
 
     public async Task DeleteAsync(Guid id)
     {
-        var pro = _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+        var pro = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
         if (pro is not null)
         {
             _dbContext.Remove(pro);

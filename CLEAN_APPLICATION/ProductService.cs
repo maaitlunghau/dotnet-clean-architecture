@@ -13,7 +13,7 @@ public class ProductService
         return await _productRepository.GetProductsAsync();
     }
 
-    public async Task<Product> GetOneProduct(Guid id)
+    public async Task<Product?> GetOneProduct(Guid id)
     {
         return await _productRepository.GetProductAsync(id);
     }
