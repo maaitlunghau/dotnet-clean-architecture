@@ -63,7 +63,7 @@ graph TD
 ### Cài đặt và Chạy thử
 1.  **Clone source code**:
     ```bash
-    git clone https://github.com/your-username/dotnet-clean-architecture.git
+    git clone https://github.com/maaitlunghau/dotnet-clean-architecture.git
     cd dotnet-clean-architecture
     ```
 
