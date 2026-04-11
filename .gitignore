@@ -1,0 +1,60 @@
+# .gitignore for .NET (ASP.NET Core) and macOS
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+Log/
+Logs/
+
+# Visual Studio files
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code files
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Entity Framework Core
+*.db
+*.db-shm
+*.db-wal
+
+# Specialized files
+[Pp]ublish/
+*.g.cs
+*.g.i.cs
+
+# Local Config
+# appsettings.Development.json # Commented out so it's tracked by default, uncomment if it contains secrets
+appsettings.Local.json
