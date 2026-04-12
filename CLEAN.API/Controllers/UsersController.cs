@@ -48,8 +48,8 @@ namespace CLEAN.API.Controllers
             var user = await _userService.GetByIdAsync(id);
             if (user is null) return NotFound();
 
-            await _userService.UpdateAsync(id, request);
-            return Ok(user);
+            var updatedUser = await _userService.UpdateAsync(id, request);
+            return Ok(updatedUser);
         }
 
         [HttpDelete("{id:guid}")]

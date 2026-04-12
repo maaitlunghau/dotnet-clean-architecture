@@ -37,16 +37,16 @@ public class UserService : IUserService
             Id = Guid.NewGuid(),
             Username = request.Username,
             Email = request.Email,
+            Age = request.Age,
             CreatedAt = DateTime.UtcNow
         };
-
 
         await _userRepository.AddAsync(user);
 
         return new UserDto(user.Id, user.Username, user.Email, user.Age);
     }
 
-    public async Task UpdateAsync(Guid id, UpdateUserDto request)
+    public async Task<UserDto> UpdateAsync(Guid id, UpdateUserDto request)
     {
         var user = await _userRepository.GetByIdAsync(id);
         if (user is null) throw new Exception("User not found");
@@ -56,6 +56,8 @@ public class UserService : IUserService
         user.Age = request.Age!.Value;
 
         await _userRepository.UpdateAsync(user);
+
+        return new UserDto(user.Id, user.Username, user.Email, user.Age);
     }
 
     public async Task DeleteAsync(Guid id)
