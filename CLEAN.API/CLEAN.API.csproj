@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../CLEAN.APPLICATION/CLEAN.APPLICATION.csproj" />
+    <ProjectReference Include="../CLEAN.INFRASTRUCTURE/CLEAN.INFRASTRUCTURE.csproj" />
+  </ItemGroup>
+
 </Project>
